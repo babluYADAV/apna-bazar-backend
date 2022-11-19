@@ -1,13 +1,11 @@
 const express = require("express");
-const bodyParser = require("body-parser");
+
 const multer = require("multer");
 const path = require("path");
 
 const store_controller = require("../controllers/storeController");
 
 const store_route = express();
-store_route.use(bodyParser.json());
-store_route.use(bodyParser.urlencoded({ extended: true }));
 
 store_route.use(express.static("public"));
 
